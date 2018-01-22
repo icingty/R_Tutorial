@@ -1,11 +1,13 @@
 setwd("~/GEOVIDE_OtherData/pRatio_AOU")
-df1 <- read.csv(file = "pRatio_AOU_GAM.csv", header = TRUE, sep = ",")
+require(xlsx)
+#df1 <- read.csv(file = "pRatio_AOU_GAM.csv", header = TRUE, sep = ",")
+df1 <- read.xlsx("pRatio_AOU_update0119.xlsx", sheetName = "pRatio_AOU_GA01update0119")
 df2 <- df1[order(df1$AOU),]
 
 
 #the plot starts at the origin (0,0)
 #par(xaxs="i", yaxs="i") 
-png("pRatio_vs_AOU_011118.png", width = 7, height = 7, units = "in",
+png("pRatio_vs_AOU_011918.png", width = 7, height = 7, units = "in",
     pointsize = 12, res=300)
 
 #par(mar=c(4,5,1,1),oma = c(3,1,0,0))
